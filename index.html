@@ -42,32 +42,40 @@
     <title>실시간 채팅</title>
   </head>
   <body>
-    <div data-role="page">
-      <div data-role="header">
-        <h1>Socket.io Chat</h1>
+    <div class="row">
+      <!-- 대기실 -->
+      <div class="col-lg-4">
+        <div class="card">
+          <div class="card-header">대기실</div>
+          <div class="card-body">
+            <form action="">
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="m"
+                  autocomplete="off"
+                />
+                <div class="input-group-append">
+                  <button
+                    id="msg-send"
+                    class="btn btn-primary"
+                    placeholder="message"
+                  >
+                    Send
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="card-footer">
+            <ul id="messages"></ul>
+          </div>
+        </div>
       </div>
-      <div data-role="content">
-        <h3>Nick Name</h3>
-        <input id="name" />
-        <a data-role="button" href="#chatpage">Start Chat</a>
-      </div>
-    </div>
-    <div data-role="page" id="chatpage">
-      <div data-role="header">
-        <h1>Socket.io Chat</h1>
-      </div>
-      <div data-role="content">
-        <!-- 메세지 입력 -->
-        <input id="message" />
-        <button id="button">Button</button>
-        <!-- 사진 업로드 -->
-        <form id="uploadForm" method="post" enctype="multipart/form-data">
-          <input type="file" name="test" id="test" />
-          <button type="button" id="uploadBtn">Save</button>
-        </form>
-        <!-- 전송한 내용이 출력될 위치 -->
-        <ul id="content" data-role="listview" data-inset="true"></ul>
-      </div>
+
+      <!-- 방선택 -->
+      <div class="col-lg-8"></div>
     </div>
   </body>
 </html>
