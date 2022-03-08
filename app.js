@@ -1,13 +1,11 @@
 const express = require('express')
 const port = 3000
 const app = express()
-const indexRouter = require('./routers/index')
+const http = require('http')
 
-app.use(express.urlencoded({ extended: false }))
-app.use(express.json())
-
-//router
-app.use('/api', indexRouter)
+app.get('/', (req, res) => {
+    res.send("node start!")
+})
 
 //error
 app.use((req, res, next) => {
