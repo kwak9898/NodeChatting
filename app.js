@@ -4,7 +4,7 @@ const app = express()
 const http = require('http')
 
 app.get('/', (req, res) => {
-    res.send("node start!")
+    res.sendFile(__dirname + '/index.html')
 })
 
 //error
