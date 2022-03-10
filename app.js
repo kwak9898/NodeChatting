@@ -10,6 +10,7 @@ app.get('/', (req, res) => {
 
 io.on('connection', (socket) => {
     socket.on('request_message', (msg) => {
+        // response_message로 접속중인 모든 사용자에게 msg 를 담은 정보를 방출한다.
         io.emit('response_message', msg)
     })
 
