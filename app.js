@@ -14,5 +14,5 @@ app.get('/', (req, res) => {
 });
 
 server.listen(3000, () => {
-    console.log('3000번 포트 연결 성공!!!')
-})
+    console.log('3000번 포트 연결 성공!!!');
+});
